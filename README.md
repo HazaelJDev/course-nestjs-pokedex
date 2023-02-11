@@ -3,3 +3,24 @@
 </p>
 
 # Pokedex en Nest Js
+
+## Modo de desarrollo
+1. Tener instalado Nest CLI
+```
+npm i -g @nestjs/cli
+```
+2. Clonar este repositorio
+3. Entrar en la terminal a este proyecto y ejecutar
+```
+yarn install
+```
+4. Levantar la base de datos con Docker Compose
+```
+docker-compose up -d
+```
+
+
+## Stack usado
+* Nest JS
+* Typescript
+* MongoDB
