@@ -88,6 +88,25 @@ export class PokemonService {
     return;
   }
 
+  async createWithSeed(createPokemonDto: CreatePokemonDto[]) {
+    try {
+      await this.pokemonModel.insertMany(createPokemonDto);
+    } catch (error) {
+      this.handleException(error);
+    }
+  }
+
+  async removeAll(password: string) {
+    const pass = 'ALV';
+    if (password === pass) {
+      //delete * from pokemons;
+      await this.pokemonModel.deleteMany({});
+      console.log('Datos eliminados de la DB');
+      return;
+    }
+    throw new BadRequestException(`Wrong password to eliminate all`);
+  }
+
   private handleException(error: any) {
     if (error.code === 11000) {
       throw new BadRequestException(
