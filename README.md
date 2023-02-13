@@ -18,10 +18,18 @@ yarn install
 ```
 docker-compose up -d
 ```
-5. Reconstruir la base de datos con la semilla
+5. Clonar el archivo ```.env.template```, renombra la copia a ```.env``` y dentro de este remplaza los valores de las variables de entorno a tu preferencia.
+
+6. Ejecutar el servidor en modo de desarrollo:
+```
+yarn start:dev
+```
+
+7. Reconstruir la base de datos con la semilla
 ```
 http://localhost:3000/api/v2/seed
 ```
+
 
 
 ## Stack usado
